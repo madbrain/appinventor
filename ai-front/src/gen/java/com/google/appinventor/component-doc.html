@@ -1,0 +1,161 @@
+<table style="border-color: rgb(136, 136, 136); border-width: 0px; border-collapse: collapse;" border="0" bordercolor="#888888" cellpadding="5" cellspacing="5">
+<tbody valign="top">
+<tr>
+<td><b><font size="5">User Interface</font></b>
+<ul>
+  <li><a href="#Button">Button</a></li>
+</ul>
+<b><font size="5">Layout</font></b>
+<ul>
+  <li><a href="#Form">Form</a></li>
+</ul>
+<b><font size="5">Media</font></b>
+<ul>
+</ul>
+<b><font size="5">Drawing and Animation</font></b>
+<ul>
+  <li><a href="#Ball">Ball</a></li>
+</ul>
+<b><font size="5">Social</font></b>
+<ul>
+</ul>
+</td>
+<td style="width: 60px;"><b><font size="5"><br/></font></b></td><td><b><font size="5">Storage</font></b>
+<ul>
+</ul>
+<b><font size="5">Connectivity</font></b>
+<ul>
+</ul>
+<b><font size="5">Sensors</font></b>
+<ul>
+</ul>
+<b><font size="5">LEGO&copy; MINDSTORMS&copy;</font></b>
+<ul>
+</ul>
+</td>
+<td style="width: 60px;"><b><font size="5"><br/></font></b></td></tr>
+</tbody>
+</table>
+
+<h2 id="Ball">Ball</h2>
+
+<p><p>A round 'sprite' that can be placed on a <code>Canvas</code>, where it can react to touches and drags, interact with other sprites (<code>ImageSprite</code>s and other <code>Ball</code>s) and the edge of the Canvas, and move according to its property values.</p><p>For example, to have a <code>Ball</code> move 4 pixels toward the top of a <code>Canvas</code> every 500 milliseconds (half second), you would set the <code>Speed</code> property to 4 [pixels], the <code>Interval</code> property to 500 [milliseconds], the <code>Heading</code> property to 90 [degrees], and the <code>Enabled</code> property to <code>True</code>.  These and its other properties can be changed at any time.</p><p>The difference between a Ball and an <code>ImageSprite</code> is that the latter can get its appearance from an image file, while a Ball's appearance can only be changed by varying its <code>PaintColor</code> and <code>Radius</code> properties.</p></p>
+
+<h3>Properties</h3>
+<dl>
+  <dt><code>PaintColor</code></dt>
+  <dd></dd>
+  <dt><code>Radius</code></dt>
+  <dd></dd>
+</dl>
+
+<h3>Events</h3>
+none
+
+<h3>Methods</h3>
+none
+
+
+<h2 id="Button">Button</h2>
+
+<p>Button with the ability to detect clicks.  Many aspects of its appearance can be changed, as well as whether it is clickable (<code>Enabled</code>), can be changed in the Designer or in the Blocks Editor.</p>
+
+<h3>Properties</h3>
+none
+
+<h3>Events</h3>
+<dl>
+  <dt><code>Click()</code></dt>
+  <dd>User tapped and released the button.</dd>
+  <dt><code>LongClick()</code></dt>
+  <dd>User held the button down.</dd>
+</dl>
+
+<h3>Methods</h3>
+none
+
+
+<h2 id="Form">Form</h2>
+
+<p>Top-level component containing all other components in the program</p>
+
+<h3>Properties</h3>
+<dl>
+  <dt><code>AboutScreen</code></dt>
+  <dd>Information about the screen.  It appears when "About this Application" is selected from the system menu. Use it to inform people about your app.  In multiple screen apps, each screen has its own AboutScreen info.</dd>
+  <dt><code>AccentColor</code> (designer only)</dt>
+  <dd>This is the accent color used for highlights and other user interface accents.</dd>
+  <dt><code>ActionBar</code> (designer only)</dt>
+  <dd></dd>
+  <dt><code>AlignHorizontal</code></dt>
+  <dd>A number that encodes how contents of the screen are aligned  horizontally. The choices are: 1 = left aligned, 2 = horizontally centered,  3 = right aligned.</dd>
+  <dt><code>AlignVertical</code></dt>
+  <dd>A number that encodes how the contents of the arrangement are aligned vertically. The choices are: 1 = aligned at the top, 2 = vertically centered, 3 = aligned at the bottom. Vertical alignment has no effect if the screen is scrollable.</dd>
+  <dt><code>AppName</code> (designer only)</dt>
+  <dd>This is the display name of the installed application in the phone.If the AppName is blank, it will be set to the name of the project when the project is built.</dd>
+  <dt><code>BackgroundColor</code></dt>
+  <dd></dd>
+  <dt><code>BackgroundImage</code></dt>
+  <dd>The screen background image.</dd>
+  <dt><code>CloseScreenAnimation</code></dt>
+  <dd>The animation for closing current screen and returning  to the previous screen. Valid options are default, fade, zoom, slidehorizontal, slidevertical, and none</dd>
+  <dt><code><em>Height</em></code></dt>
+  <dd>Screen height (y-size).</dd>
+  <dt><code>Icon</code> (designer only)</dt>
+  <dd></dd>
+  <dt><code>OpenScreenAnimation</code></dt>
+  <dd>The animation for switching to another screen. Valid options are default, fade, zoom, slidehorizontal, slidevertical, and none</dd>
+  <dt><code>PrimaryColor</code> (designer only)</dt>
+  <dd>This is the primary color used for Material UI elements, such as the ActionBar.</dd>
+  <dt><code>PrimaryColorDark</code> (designer only)</dt>
+  <dd>This is the primary color used for darker elements in Material UI.</dd>
+  <dt><code>ScreenOrientation</code></dt>
+  <dd>The requested screen orientation, specified as a text value.  Commonly used values are landscape, portrait, sensor, user and unspecified.  See the Android developer documentation for ActivityInfo.Screen_Orientation for the complete list of possible settings.</dd>
+  <dt><code>Scrollable</code></dt>
+  <dd>When checked, there will be a vertical scrollbar on the screen, and the height of the application can exceed the physical height of the device. When unchecked, the application height is constrained to the height of the device.</dd>
+  <dt><code>ShowListsAsJson</code> (designer only)</dt>
+  <dd>If false, lists will be converted to strings using Lisp notation, i.e., as symbols separated by spaces, e.g., (a 1 b2 (c d). If true, lists will appear as in Json or Python, e.g.  ["a", 1, "b", 2, ["c", "d"]].  This property appears only in Screen 1, and the value for Screen 1 determines the behavior for all screens. The property defaults to "false" meaning that the App Inventor programmer must explicitly set it to "true" if JSON/Python syntax is desired. At some point in the future we will alter the system so that new projects are created with this property set to "true" by default. Existing projects will not be impacted. The App Inventor programmer can also set it back to "false" in newer projects if desired. </dd>
+  <dt><code>ShowStatusBar</code></dt>
+  <dd>The status bar is the topmost bar on the screen. This property reports whether the status bar is visible.</dd>
+  <dt><code>Sizing</code> (designer only)</dt>
+  <dd>If set to fixed,  screen layouts will be created for a single fixed-size screen and autoscaled. If set to responsive, screen layouts will use the actual resolution of the device.  See the documentation on responsive design in App Inventor for more information. This property appears on Screen1 only and controls the sizing for all screens in the app.</dd>
+  <dt><code>Theme</code> (designer only)</dt>
+  <dd>Sets the theme used by the application.</dd>
+  <dt><code>Title</code></dt>
+  <dd>The caption for the form, which apears in the title bar</dd>
+  <dt><code>TitleVisible</code></dt>
+  <dd>The title bar is the top gray bar on the screen. This property reports whether the title bar is visible.</dd>
+  <dt><code>TutorialURL</code> (designer only)</dt>
+  <dd>A URL to use to populate the Tutorial Sidebar while editing a project. Used as a teaching aid.</dd>
+  <dt><code>VersionCode</code> (designer only)</dt>
+  <dd>An integer value which must be incremented each time a new Android Application Package File (APK) is created for the Google Play Store.</dd>
+  <dt><code>VersionName</code> (designer only)</dt>
+  <dd>A string which can be changed to allow Google Play Store users to distinguish between different versions of the App.</dd>
+  <dt><code><em>Width</em></code></dt>
+  <dd>Screen width (x-size).</dd>
+</dl>
+
+<h3>Events</h3>
+<dl>
+  <dt><code>BackPressed()</code></dt>
+  <dd>Device back button pressed.</dd>
+  <dt><code>ErrorOccurred(component component, text functionName, number errorNumber, text message)</code></dt>
+  <dd>Event raised when an error occurs. Only some errors will raise this condition.  For those errors, the system will show a notification by default.  You can use this event handler to prescribe an error behavior different than the default.</dd>
+  <dt><code>Initialize()</code></dt>
+  <dd>Screen starting</dd>
+  <dt><code>OtherScreenClosed(text otherScreenName, any result)</code></dt>
+  <dd>Event raised when another screen has closed and control has returned to this screen.</dd>
+  <dt><code>PermissionDenied(component component, text functionName, text permissionName)</code></dt>
+  <dd>Event for PermissionDenied</dd>
+  <dt><code>PermissionGranted(text permissionName)</code></dt>
+  <dd>Event for PermissionGranted</dd>
+  <dt><code>ScreenOrientationChanged()</code></dt>
+  <dd>Screen orientation changed</dd>
+</dl>
+
+<h3>Methods</h3>
+<dl>
+  <dt><code>AskForPermission(text permissionName)</code></dt>
+  <dd>Method for AskForPermission</dd>
+</dl>
+

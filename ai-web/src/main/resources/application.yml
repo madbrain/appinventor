@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/appinventor
+    username: appinventor
+    password: appinventor
+  jpa:
+    hibernate.ddl-auto: update # create
+    properties:
+      hibernate.temp.use_jdbc_metadata_defaults: false
+
+buildserver.url: http://localhost:9990
+public.url: http://localhost:8080
+rendezvousserver.url: 192.168.0.41:3000
+
+url.encryption.key: 7gYSD8PZgou9QGej4WQS
